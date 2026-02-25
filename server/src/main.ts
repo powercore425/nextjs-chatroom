@@ -1,12 +1,15 @@
-import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
+import { NestFactory } from "@nestjs/core";
+import { AppModule } from "./app.module";
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors({
-  origin: ['http://localhost:3000', 'https://nextjs-chatroom-rho.vercel.app'],
-  credentials: true,
-});
+    origin: [
+      "http://localhost:3000",
+      "https://nextjs-chatroom-pknw.vercel.app",
+    ],
+    credentials: true,
+  });
   await app.listen(3001);
 }
 bootstrap();
