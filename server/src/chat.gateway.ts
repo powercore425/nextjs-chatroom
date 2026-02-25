@@ -36,7 +36,10 @@ interface RoomInfo {
 }
 
 @WebSocketGateway({
-  cors: { origin: ['http://localhost:3000'], credentials: true },
+  cors: {
+    origin: ['http://localhost:3000', 'https://nextjs-chatroom-rho.vercel.app'],
+    credentials: true,
+  },
   transports: ['websocket', 'polling'],
 })
 export class ChatGateway implements OnGatewayConnection, OnGatewayDisconnect {
