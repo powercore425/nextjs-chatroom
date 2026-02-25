@@ -151,15 +151,18 @@ export function ChatRoom({
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="shrink-0 p-3 sm:p-4 bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700">
-        <div className="flex items-end gap-1 sm:gap-2 rounded-xl border border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-700/50 focus-within:ring-2 focus-within:ring-blue-500 dark:focus-within:ring-blue-400 focus-within:border-blue-500 dark:focus-within:border-blue-400">
+      <form
+        onSubmit={handleSubmit}
+        className="shrink-0 px-4 pb-4 pt-2 sm:px-6 sm:pb-5 sm:pt-3 bg-white dark:bg-slate-800/95 border-t border-slate-200/80 dark:border-slate-700/80 backdrop-blur-sm"
+      >
+        <div className="flex items-center gap-2 rounded-[1.25rem] border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-700/80 shadow-[0_1px_2px_rgba(0,0,0,0.04)] dark:shadow-[0_1px_2px_rgba(0,0,0,0.2)] focus-within:border-blue-400 dark:focus-within:border-blue-500 focus-within:shadow-[0_0_0_2px_rgba(59,130,246,0.2)] dark:focus-within:shadow-[0_0_0_2px_rgba(96,165,250,0.25)] transition-[border-color,box-shadow] duration-150">
           <button
             type="button"
-            className="p-2 sm:p-2.5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 rounded-l-xl"
+            className="shrink-0 flex items-center justify-center w-10 h-10 rounded-full text-slate-400 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-600/80 transition-colors"
             aria-label="Emoji"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.8}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </button>
           <textarea
@@ -168,12 +171,12 @@ export function ChatRoom({
             onKeyDown={handleKeyDown}
             placeholder="Type a message..."
             rows={1}
-            className="flex-1 min-h-[44px] max-h-32 py-2.5 px-0 bg-transparent text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 resize-none focus:outline-none text-base sm:text-inherit"
+            className="flex-1 min-h-[2.75rem] max-h-32 py-2.5 px-0 bg-transparent text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 resize-none focus:outline-none text-[15px] sm:text-base leading-[1.4]"
           />
           <button
             type="submit"
             disabled={!input.trim()}
-            className="m-1.5 px-3 sm:px-4 py-2 rounded-lg bg-blue-500 dark:bg-blue-600 text-white font-medium hover:bg-blue-600 dark:hover:bg-blue-500 disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base"
+            className="shrink-0 h-10 px-5 rounded-full bg-blue-500 dark:bg-blue-500 text-white font-semibold text-[15px] shadow-sm hover:bg-blue-600 dark:hover:bg-blue-600 disabled:opacity-40 disabled:pointer-events-none active:scale-[0.98] transition-all duration-150"
           >
             Send
           </button>

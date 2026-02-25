@@ -120,7 +120,7 @@ html.dark body {
 [data-theme="dark"] .placeholder-slate-400,
 .dark input,
 .dark textarea {
-  background-color: #334155 !important;
+  background-color: transparent;
   color: #f1f5f9 !important;
   border-color: #475569 !important;
 }
@@ -184,5 +184,7 @@ html.dark body {
 
 [data-theme="dark"] .shadow-lg,
 .dark .shadow-lg {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.3) !important;
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.3),
+    0 4px 6px -4px rgba(0, 0, 0, 0.3) !important;
 }
